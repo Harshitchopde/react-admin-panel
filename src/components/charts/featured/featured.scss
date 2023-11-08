@@ -1,0 +1,77 @@
+.featured{
+    flex: 2;
+    box-shadow: 1px 2px 8px 4px rgba(183, 91, 91, 0.79);
+    -webkit-box-shadow: 1px 2px 8px 4px rgba(218, 191, 191, 0.79);
+    -moz-box-shadow: 1px 2px 8px 4px rgba(218, 191, 191, 0.79);
+    border-radius: 10px;
+    padding: 5px;
+    .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: gray;
+        .title{
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+    .bottom{
+        padding:20px;
+        display: flex;// df
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;//jcc
+        gap: 15px;
+        .featuredChart{
+            width: 100px;
+            height: 100px;
+        }
+        .title{
+            font-weight: 500;
+
+            color: gray;
+
+        }
+        .amount{
+            font-size: 30px;
+
+
+        }
+        .des{
+            font-weight: 300;
+            font-style: 12px;
+            color: gray;
+            text-align: center;
+
+        }
+        .summary{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            .item{
+                text-align: center;
+                .itemTitle{
+                    font-style: 14px;
+                    color: gray;
+                }
+                .itemResult{
+                    display: flex;
+                    align-items: center;
+                    margin: 10px;
+                    font-size: 14px;
+                    &.pos{
+                        color: green;
+                    }
+                    &.neg{
+                        color: red;
+                    }
+                }
+            }
+
+        }
+
+
+
+    }
+}

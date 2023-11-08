@@ -1,0 +1,75 @@
+.navbar{
+    height: 50px;
+    border-radius:0.5 solid rgb(245, 225, 225);
+    display: flex;
+    align-items: center;// if 
+    font-size: 14px;
+    color: #555;
+
+    .wrapper{
+        display: flex;
+        width: 100%;
+        padding: 20px;
+        justify-content: space-between;
+        align-items: center;
+        .search{
+            display: flex;
+            align-items: center;
+            padding: 3x;
+            border:0.5px solid lightgray ;
+            
+            input{
+                border: none;// it will none the boder of search bar
+                outline: none;
+               
+                
+                background: transparent;// because when we change the mode it will remain the black
+            }
+
+
+        }
+        .items{
+            display: flex;
+            align-items: center;
+            
+            
+            .item{
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+                position: relative;
+                // background-color: yellow;
+                
+                
+                cursor: pointer;
+                .icon{
+                    font-size: 20px;
+
+
+                }
+            .avatar{
+                width: 30px;
+                height: 30px;
+                border-radius: 50px;
+            }
+            .counter{
+                width: 15px;
+                height: 15px;
+                background-color: red;
+                border-radius: 50%;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-style: 10px;
+                position: absolute;
+                top: -6px;
+                right: -6px;
+            }
+                
+            }
+           
+
+        }
+    }
+}
