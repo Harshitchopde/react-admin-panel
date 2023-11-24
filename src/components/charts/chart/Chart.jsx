@@ -3,7 +3,7 @@ import "./chart.scss"
 import { linearGradient, AreaChart, XAxis, YAxis, CartesianGrid, Tooltip, Area, ResponsiveContainer } from 'recharts';
 // use the recharts in this part
 
-const Chart = () => {
+const Chart = ({aspect}) => {
 
   const data = [
     {
@@ -45,7 +45,7 @@ const Chart = () => {
   return (
     <div className='chart'>
       <h4 className='title'>7 month Result </h4>
-      <ResponsiveContainer width="100%" aspect={2/1}>
+      <ResponsiveContainer width="100%" aspect={aspect}>
 
 
         <AreaChart width={730} height={250} data={data}

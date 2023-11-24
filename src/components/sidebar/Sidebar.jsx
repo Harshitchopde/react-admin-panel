@@ -9,6 +9,7 @@ import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import DeliveryDiningIcon from '@mui/icons-material/DeliveryDining';
+import { Link } from "react-router-dom";
 const Sidebar = () => {
   return (
     <div className="sidebar">
@@ -22,10 +23,11 @@ const Sidebar = () => {
           <li>
             <DashboardIcon className="icon" />
             <span>Dashboard</span></li>
-            
+           <Link to='users'>
           <li>
             <PersonIcon className="icon" />
             <span>User</span></li>
+            </Link> 
             <p className="title">LIST</p>
           <li>
             <CategoryIcon className="icon" />
@@ -36,6 +38,7 @@ const Sidebar = () => {
           <li>
             <DeliveryDiningIcon className="icon" />
             <span>Delivery</span></li>
+            <hr/>
             <p className="title">USEFUL</p>
           <li>
             <QueryStatsIcon className="icon" />
@@ -43,6 +46,7 @@ const Sidebar = () => {
           <li>
             <NotificationsIcon className="icon" />
             <span>Notifications</span></li>
+            <hr/>
             <p className="title">SERVISES</p>
           <li>
             <HealthAndSafetyIcon className="icon" />
@@ -50,6 +54,7 @@ const Sidebar = () => {
           <li>
             <SettingsIcon className="icon" />
             <span>Settings</span></li>
+            <hr/>
             <p className="title">USER</p>
           <li>
             <AccountCircleOutlinedIcon className="icon" />
