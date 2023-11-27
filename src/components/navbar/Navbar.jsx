@@ -7,7 +7,16 @@ import CropFreeOutlinedIcon from '@mui/icons-material/CropFreeOutlined';
 import BedtimeOutlinedIcon from '@mui/icons-material/BedtimeOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
+import { useContext } from "react";
+import { DarkModeContext } from "../../context/darkModeContext";
 const Navbar = () => {
+  const {dispatch,darkMode}= useContext(DarkModeContext);
+  
+  const handleToggle =()=>{
+    
+    darkMode?dispatch({type:"LIGHT"}):dispatch({type:"DARK"})
+  
+  }
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -17,11 +26,11 @@ const Navbar = () => {
         </div>
         <div className="items">
           <div className="item">
-           <LanguageIcon/>
+           <LanguageIcon />
             English
           </div>
-          <div className="item">
-           <BedtimeOutlinedIcon className="icon"/>
+          <div className="item"  onClick={()=>handleToggle()}>
+           <BedtimeOutlinedIcon className="icon" />
 
           </div>
         

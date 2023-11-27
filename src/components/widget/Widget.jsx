@@ -1,4 +1,4 @@
-import { MonetizationOnOutlined,  ShoppingCartOutlined } from "@mui/icons-material";
+import { KeyboardArrowDown, MonetizationOnOutlined,  ShoppingCartOutlined } from "@mui/icons-material";
 import "./widget.scss"
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
@@ -14,44 +14,48 @@ const Widget = ({type}) => {
     case "user":
       data={
         title:"USERs",
+        profit:"positive",
         isMoney:false,
         link:"See all uses",
         icon:<PersonOutlineIcon style={{
           color:"blue",
-          backgroundColor:"rgb(201, 201, 248)"}}
+          backgroundColor:"rgb(201, 201, 248, 0.081)"}}
           className="icon"/>,
       };
       break;
     case "order":
         data={
         title:"ORDERS",
+        profit:"positive",
         isMoney:false,
         link:"View all orders",
         icon:<ShoppingCartOutlined className="icon" style={{
           color:'red',
-          backgroundColor:" rgb(248, 204, 204)"
+          backgroundColor:" rgb(248, 204, 204, 0.081)"
         }}/>,
       };
       break;
     case "earning":
       data={
         title:"EARNINGS",
+        profit:"positive",
         isMoney:true,
         link:"View new Earning",
         icon:<MonetizationOnOutlined style={{
           color:"orange",
-          backgroundColor:"rgb(245, 229, 199)"
+          backgroundColor:"rgb(245, 229, 199, 0.081)"
         }} className="icon"/>,
       };
       break;
     case "balance":
       data={
         title:"BALANCE",
+        profit:"negative",
         isMoney:false,
         link:"See user balance",
         icon:<AccountBalanceIcon  style={{
           color:"pink",
-          backgroundColor:"rgb(249, 234, 237)"
+          backgroundColor:"rgba(249, 234, 237, 0.081)"
         }} className="icon"/>,
       };
       break;
@@ -69,8 +73,8 @@ const Widget = ({type}) => {
         </div>
         <div className="right">
           
-          <div className="percentage negative">
-            <KeyboardArrowUpIcon/>
+          <div className={`percentage ${data.profit}`}>
+            {data.profit==="positive"?<KeyboardArrowUpIcon/>:<KeyboardArrowDown/>}
             {diff}%
           </div>
           {data.icon}

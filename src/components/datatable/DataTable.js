@@ -3,6 +3,7 @@ import React from 'react'
 import "./datatable.scss"
 
  import { userColumns,userRows } from '../../datatablesource';
+import { Link } from 'react-router-dom';
 function DataTable() {
     const actionColums =[
         {
@@ -12,7 +13,10 @@ function DataTable() {
             renderCell:()=>{
                 return (
                     <div className="cellAction">
+                      <Link to="/users/test" style={{textDecoration:'none'}}>
+
                         <div className="viewBtn">View</div>
+                      </Link>
                         <div className="deleteBtn">Delete</div>
                     </div>
                 )
@@ -22,8 +26,15 @@ function DataTable() {
     ];
   return (
     <div style={{ width: '100%' }} className="datatable">
+      <div className="datatableTitle">
+        Add the User : 
+        <Link to="/users/new" className='link' >
+        ADD NEW
+        </Link>
+      </div>
        
           <DataGrid
+            className='datagrid'
             rows={userRows}
             columns={userColumns.concat(actionColums)}
             initialState={{
