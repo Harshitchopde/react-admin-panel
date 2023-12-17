@@ -7,7 +7,6 @@ import { red } from "@mui/material/colors";
 import { rgbToHex } from "@mui/material";
 const Widget = ({type}) => {
   let data;
-  // data.title="dsfasdfa";
   let amount=100;
   let diff=20;
   switch(type){
