@@ -19,7 +19,7 @@ const Featured = () => {
             </div>
             <div className="title">Totel sales made today</div>
             <div className="amount">$420</div>
-            <div className="des">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem reiciendis,</div>
+            <div className="des">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
             <div className="summary">
                 <div className="item">
                     <div className="itemTitle">Target</div>

@@ -6,9 +6,16 @@
     color: gray;
     padding: 15px;
     margin-left: 10px;
-    
-    .title{
+    overflow-y: hidden;
+    .responsiveCon{
+        
 
+        .areachart{
+            overflow-y: hidden;
+        }
+    }
+    .title{
+     
         .chartGrid{
             stroke: lightgray;
         }

@@ -14,7 +14,8 @@ const Navbar = () => {
   
   const handleToggle =()=>{
     
-    darkMode?dispatch({type:"LIGHT"}):dispatch({type:"DARK"})
+    // darkMode?dispatch({type:"LIGHT"}):dispatch({type:"DARK"})
+    dispatch({type:"TOGGLE"})
   
   }
   return (
@@ -38,14 +39,15 @@ const Navbar = () => {
            <CropFreeOutlinedIcon  className="icon"/>
            
           </div>
-          <div className="item">
+          <div className="item icout">
            <NotificationsNoneOutlinedIcon className="icon"/>
-           <div className="counter">2</div>
+          <div className="counter">2</div>
            
           </div>
-          <div className="item">
+          <div className="item icout">
            <MessageOutlinedIcon className="icon"/>
-           <div className="counter">1</div>
+
+           <span className="counter">2</span>
           </div>
           <div className="item">
            <MenuOutlinedIcon className="icon"/>
